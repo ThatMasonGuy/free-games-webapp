@@ -19,10 +19,21 @@
       "predeploy": [
         "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
+    },
+    {
+      "source": "mason-webapp",
+      "codebase": "mason-webapp",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
     }
   ],
   "hosting": {
-    "public": "(dist)",
+    "site": "mason-webapp",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
